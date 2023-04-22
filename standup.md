@@ -68,7 +68,11 @@
 - Goal 3
 
 ### Main Blocks/Problems
+- Problem 1
+- Problem 2
 
 
 
 ### Main Successes/Things Finished
+- Thing 1
+- Thing 2
