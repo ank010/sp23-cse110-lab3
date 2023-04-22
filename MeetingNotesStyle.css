@@ -1,0 +1,63 @@
+
+/*Set the background color to Masters green*/
+body{
+    background-color: #006747;
+}
+
+/*Set the largest header style to color blue + tab it in 20 pixels*/
+h1 {
+    color:blue;
+    margin-left: 20px;
+    font-size: 60px;
+}
+/*Set the second largest header style to color using rgb + tab it in 25 pixels*/
+h2 {
+    color:rgb(100, 150, 200);
+    margin-left: 25px;
+    font-size: 7mm;
+}
+
+/*Set the third largest header style to color using rgb + tab it in 30 pixels*/
+h3 { 
+    color: hsl(120, 90, 30);
+    margin-left: 30px;
+    font-size: 1pc;
+}
+/*Add box model for main meeting notes content*/
+.MainContent {
+    margin: auto;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-style: dotted;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 5vw;
+}
+
+/*Add box model and font size of Agenda section of Notes*/
+.Agenda {
+    margin: 5px 5px 5px 5px;
+    padding: 1px 5px 5px 5px;
+    border-style: dashed;
+    border-color: red;
+    border-width: 5px;
+    border-radius: 4vmax;
+
+    font-size: medium;
+}
+
+/*Add box model for the mailing form*/
+.MailingForm{
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+
+    padding: 2px 5px 15px 5px;
+    border-style: groove;
+    border-width: 2vmin;
+    border-color: black;
+
+}
