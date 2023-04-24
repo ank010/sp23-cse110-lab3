@@ -74,7 +74,7 @@ nav{
 }
 
 /*change color of link when you mouse over it*/
-.a:hover{
+a:hover{
     color: #cae65a;
 }
 
