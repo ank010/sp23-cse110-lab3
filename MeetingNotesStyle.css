@@ -2,7 +2,7 @@
 body{
     background-color: #006747;
 }
-/*Change background color if screen too small*/
+/*Change background color if screen width is less than 700px*/
 @media screen and (max-width: 700px){
     body{
         background-color: white;
@@ -10,16 +10,14 @@ body{
     
 }
 
-
-
 /*Set the largest header style to color blue + tab it in 20 pixels*/
 h1 {
-    color:blue;
+    color:hsl(300, 76%, 72%);
     margin-left: 20px;
     font-size: 60px;
     
 }
-
+/*Add a blueviolet shadow for h1 headers and p elements and make them the same font*/
 h1, p{
     font-family: 'Fira Sans', sans-serif;
     text-shadow: 2px 2px blueviolet;
@@ -33,6 +31,7 @@ h2 {
     text-align: center;
 }
 
+/*Combining 2 selectors to choose specific h2 elements to add the shadow to*/
 h2.sectionHead{
     text-shadow: 2px 2px #cae65a;
 }
@@ -40,7 +39,7 @@ h2.sectionHead{
 /*Set the third largest header style and the details tab to a 
 color using rgb + tab it in 30 pixels, using descendant comb*/
 h3 details{ 
-    color: hsl(120, 90, 30);
+    
     margin-left: 30px;
     font-size: 1pc;
     font-family: 'Roboto Mono', monospace;
@@ -73,34 +72,43 @@ nav{
     text-align: justify;
     color:burlywood;
 }
-/*mouse over link*/
+
+/*change color of link when you mouse over it*/
 .a:hover{
     color: #cae65a;
 }
+
 /*Child combinator for the nav bar*/
 nav > a{
     color:rgb(233, 122, 122);
     text-transform: uppercase;
 }
+
 /*Adjacent sibling combinator to transform text in the Agenda section*/
 h2 + h4{
     text-transform: uppercase;
 }
+
 /*Add shadow to any h3 header after an h3 header using general sibling comb
 (mainly in meeting notes section)*/
 h2 ~ h3{
     text-shadow: 2px 2px cyan;
 }
+
 /*Changes color of button text - button has been activated*/
 button:active{
     color: rgb(225, 31, 199);
     background-color: #006747;
 }
+
 /*Should make any element that has span tag take up whole line("THE MASTERS 
 text in the webpage*/
 span{
     display: block;
 }
+
+/*Creates relative positioning based on the screen window size for the image
+of Jon Rahm*/
 .Rahmimg{
     display: block;
     padding: 0px 5px 5px 5px;
@@ -109,8 +117,8 @@ span{
     top:10px;
 }
 
-
-/*Add box model for main meeting notes content*/
+/*Add box model for main meeting notes content - padding, margins and 
+border details*/
 .MainContent {
     margin: auto;
     padding-top: 5px;
@@ -131,19 +139,32 @@ span{
     grid-auto-rows: auto;
     grid-auto-columns: auto;
 }
-.Gitem-head {
+
+/*Stack the nav bar at the top*/
+.Gitem-nav {
     grid-area: header;
     grid-column-start: 1;
     grid-column-end: auto;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
+
+/*The title/headers of the page come second and span a row*/
+.Gitem-titles {
+    grid-area: titles;
+    grid-column-start: 1;
+    grid-column-end: auto;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+/*Attendance section should come in 3rd and span 2 rows*/
 .Gitem-Attendance {
     grid-area: main;
     grid-column-start: 1;
     grid-column-end: auto;
-    grid-row-start: 5;
-    grid-row-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 6;
 }
 
 /*Create the flex container and attributes for the agenda sub sections*/
@@ -172,11 +193,13 @@ p{
 
     font-size: medium;
 }
+
 /*Psuedo-class hover - changes the background of the Agenda class when
 moused over*/
 .Agenda:hover{
     background-color: red;
 }
+
 /*Attribute selector for all things with the agenda class*/
 [class|="Agenda"]{
     background-color: rgb(131, 131, 14);
