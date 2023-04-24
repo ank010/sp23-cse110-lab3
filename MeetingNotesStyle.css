@@ -3,26 +3,82 @@
 body{
     background-color: #006747;
 }
+/*Change background color if screen too small*/
+@media screen and (max-width: 700px){
+    body{
+        background-color: white;
+    }
+    
+}
 
 /*Set the largest header style to color blue + tab it in 20 pixels*/
 h1 {
     color:blue;
     margin-left: 20px;
     font-size: 60px;
+    font-family: 'Fira Sans', sans-serif;
+    
+
 }
 /*Set the second largest header style to color using rgb + tab it in 25 pixels*/
 h2 {
     color:rgb(100, 150, 200);
     margin-left: 25px;
     font-size: 7mm;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    
 }
 
 /*Set the third largest header style to color using rgb + tab it in 30 pixels*/
-h3 { 
+h3 details{ 
     color: hsl(120, 90, 30);
     margin-left: 30px;
     font-size: 1pc;
+    font-family: 'Roboto Mono', monospace;
+    text-align: left;
+    display:inline;
 }
+/*Hides any text with the h6 tag*/
+h6{
+    display: none;
+}
+
+
+
+nav{
+    background-color: aqua;
+    text-align: center;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    max-width: fit-content;
+    min-width: none;
+    position: fixed;
+    
+}
+/*mouse over link*/
+.a:hover{
+    color: #cae65a;
+}
+/*Changes color of button text - button has been activated*/
+form :active{
+    color: rgb(225, 31, 199);
+}
+/*Should make any element that has span tag take up whole line("THE MASTERS 
+text in the webpage*/
+span{
+    display: block;
+}
+.Rahmimg{
+    display: block;
+    padding: 0px 5px 5px 5px;
+    position: relative;
+    left: 10vmin;
+    top:10px;
+}
+
+
 /*Add box model for main meeting notes content*/
 .MainContent {
     margin: auto;
@@ -36,6 +92,44 @@ h3 {
     border-radius: 5vw;
 }
 
+/*Create the grid attribute for the header and attendance block*/
+.grid-maincontainer {
+    display: grid;
+    column-gap: 1px;
+    row-gap: 1px;
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+}
+.Gitem-head {
+    grid-area: header;
+    grid-column-start: 1;
+    grid-column-end: auto;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.Gitem-Attendance {
+    grid-area: main;
+    grid-column-start: 1;
+    grid-column-end: auto;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+/*Create the flex container and attributes for the agenda sub sections*/
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+/*Add alignment and decoration to the paragraph elements*/
+p{
+    text-align: left;
+    text-decoration-line: overline;
+    text-decoration-style: dashed;
+}
+
 /*Add box model and font size of Agenda section of Notes*/
 .Agenda {
     margin: 5px 5px 5px 5px;
@@ -46,6 +140,9 @@ h3 {
     border-radius: 4vmax;
 
     font-size: medium;
+}
+.Agenda:hover{
+    background-color: red;
 }
 
 /*Add box model for the mailing form*/

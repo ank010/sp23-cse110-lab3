@@ -9,10 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.jpg">
     <link rel="stylesheet" href="MeetingNotesStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;1,400&display=swap" rel="stylesheet">
+    <style>
+        p{
+            color:rgb(97, 9, 79);
+        }
+    </style>
   </head>
   <body>
-    <main>
-        <header>
+    <main class="grid-maincontainer">
+        <header class="Gitem-head">
             <nav>
                 <a href="https://www.google.com">Home</a>
                 <a href="https://www.pgatour.com/">PGA Tour Site</a>
@@ -20,11 +26,11 @@
             </nav>
         </header>
 
-            <h1><span>The Masters</span> Review Meeting</h1>
+            <h1><span style="color:green;text-decoration-line:underline;">The Masters</span> Review Meeting</h1>
             <h2>Today's Topic(s): Continued Discussion on and Bad Weather and Pace of Play </h2>
             <h3>April 10th, 2023</h3>
         
-        <section>
+        <section class="Gitem-Attendance">
             <h3>Attendance</h3>
 
             <details>
@@ -46,27 +52,32 @@
         <hr>
 
         <section class="Agenda">
-            <h2> Today's Agenda</h2>
-            <h4><i>Unfinished from Previous Meeting</i></h4>
-            <ol>
-                <li>Continue talks on dealing with <b>Bad Weather during the Masters tournament</b>. Last meeting we finished off with discussing better
-                ways to do scheduling when dealing with inclement weather. Today, we will continue talking about how to <em>better prepare</em> the golf course.
-                </li>
-            </ol>
-
-            <h4><i>New Topics to Cover</i></h4>
-            <ol>
-                <li><p>Pace of play was <b>extremely slow</b> in the final round, especially in the last few groups. Will go over ways to promote faster play and smoother play.</p></li>
-                <li><p>Ensure that players are <em>not waiting</em> for several minutes on each hole. Bring up possible rule changes/ammendments or penalties for consistent slow play. 
+            <div class="flex-container">
+                <h2 style="order: 3"> Today's Agenda</h2>
+                <h4 style="order: 2"><i>Unfinished from Previous Meeting</i></h4>
+                <ol style="order: 1">
+                    <li><p>Continue talks on dealing with <b>Bad Weather during the Masters tournament</b>. Last meeting we finished off with discussing better
+                    ways to do scheduling when dealing with inclement weather. Today, we will continue talking about how to <em>better prepare</em> the golf course.
                 </p></li>
-            </ol>
+                </ol>
+
+                <h4 style="order: 5"><i>New Topics to Cover</i></h4>
+                <ol style="order: 4">
+                    <li><p>Pace of play was <b>extremely slow</b> in the final round, especially in the last few groups. Will go over ways to promote faster play and smoother play.</p></li>
+                    <li><p>Ensure that players are <em>not waiting</em> for several minutes on each hole. Bring up possible rule changes/ammendments or penalties for consistent slow play. 
+                    </p></li>
+                </ol>
+            </div>
         </section>
 
         <hr>
+
+        <h6>Hi CSE 110 TAs!</h6>
+
         <div class="MainContent">
             <h2> Meeting Notes - Start: 3:03pm</h2>
             <p>F. Ridley: Once again, Congrats to Jon Rahm on winning the Masters. Great comback performance to claim the title!</p>
-            <img src="RahmMasters.jpg" alt="J. Rahm wins Masters" width="400" height="250">
+            <img class="Rahmimg" src="RahmMasters.jpg" alt="J. Rahm wins Masters" width="400" height="250">
             <h3>Weather Discussion</h3>
             <ul>
                 <li><strong>Check the Trees!</strong> - cannot have patrons in danger of trees falling on them. While what happened was a rare occurrence, bad look on maintence - cannot happen again</li>
